@@ -58,17 +58,15 @@ function generatePassword() {
     var passwordLength = prompt("How many characters do you want?");
     if (passwordLength < 8) {
       alert("Password cannot be less than 8 characters")
-      generatePassword()
+      return "Invalid criteria, generate again"
     } else if (passwordLength > 128){
       alert("Password cannot be more than 128 characters")
-      generatePassword()
+      return "Invalid criteria, generate again"
     } else {
         for (i=0; i < passwordLength; i++) {
           userPassword += passwordCharacters.charAt(Math.floor(Math.random() * passwordCharacters.length))
         }
         return userPassword
-        writePassword() 
-        console.log(userPassword)
     }
   } else {
     alert("You must include at least one type of character");
