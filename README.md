@@ -9,4 +9,4 @@ Despite the simplicity of the UI, this password generator does have some more co
 
 ## Deployed Application 
 
-Find the deployed application at https://will-neal.github.io/Wills-Password-Generator/
+[Click for deployed application](https://will-neal.github.io/Wills-Password-Generator/)

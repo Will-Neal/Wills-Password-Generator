@@ -43,7 +43,7 @@ function generatePassword() {
   var lowerCase = "abcdefghijklmnopqrstuvwxyz"
   var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   var numbers = "1234567890"
-  var specialCharacters = "!@#$%^&*()-+/" 
+  var specialCharacters = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~" 
   //asking the user to confirm which characters they want to include
   var lowerConfirm = confirm("Include lowercase letters?")
   if (lowerConfirm) {
