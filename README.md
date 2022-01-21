@@ -6,3 +6,7 @@ Will's Password Generator is a web based password generator that creates a rando
 ## Functionality
 
 Despite the simplicity of the UI, this password generator does have some more complex functionality that sets it apart from the most rudimentary password generators. The user is able to choose whether or not to include four different categories of characters - lowercase, uppercase, numeric and special. They are also able to choose how many characters long they would like the password to be between 8 and 128 characters. If they choose any number less than 8 or greater than 128 they will be alerted that they have made an invalid selection and the function will refire. Similarly, if they choose to include no categories of characters they will be prompted that they must select at least one category. However, in this case the function will not automatically be refired and instead text will be displayed in the password display telling them to generate again. This is because it is possible that they are repeatedly selecting cancel because they dont want to generate a password and this will break the loop, only calling the function again if they choose to by clicking the generate password button. 
+
+## Deployed Application 
+
+Find the deployed application at https://will-neal.github.io/Wills-Password-Generator/
