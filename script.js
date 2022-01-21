@@ -81,6 +81,7 @@ function generatePassword() {
       generatePassword()
     } else if (passwordLength > 128){
       alert("Password cannot be more than 128 characters")
+      generatePassword()
     } else {
         for (i=0; i < passwordLength; i++) {
           userPassword += passwordCharacters.charAt(Math.floor(Math.random() * passwordCharacters.length))
