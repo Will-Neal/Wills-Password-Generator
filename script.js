@@ -73,20 +73,23 @@ function generatePassword() {
     passwordCharacters = passwordCharacters
   }
 
-
-  var passwordLength = prompt("How many characters do you want?");
-  if (passwordLength < 8) {
-    alert("Password cannotbe less than 8 characters")
-    generatePassword()
-  } else if (passwordLength > 128){
-    alert("Password cannot be more than 128 characters")
+  //Conditional to make sure that at least one option is selected
+  if (passwordCharacters.length > 1) {
+    var passwordLength = prompt("How many characters do you want?");
+    if (passwordLength < 8) {
+      alert("Password cannotbe less than 8 characters")
+      generatePassword()
+    } else if (passwordLength > 128){
+      alert("Password cannot be more than 128 characters")
+    } else {
+        for (i=0; i < passwordLength; i++) {
+          userPassword += passwordCharacters.charAt(Math.floor(Math.random() * passwordCharacters.length))
+        }
+        return userPassword
+        writePassword()
+        console.log(userPassword)
+    }
   } else {
-      for (i=0; i < passwordLength; i++) {
-        userPassword += passwordCharacters.charAt(Math.floor(Math.random() * passwordCharacters.length))
-      }
-      return userPassword
-      writePassword()
-      console.log(userPassword)
+    alert("You must include at least one type of character");
   }
-
 }
