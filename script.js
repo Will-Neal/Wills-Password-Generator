@@ -91,5 +91,6 @@ function generatePassword() {
     }
   } else {
     alert("You must include at least one type of character");
+    return "Invalid Criteria, generate again";
   }
 }
