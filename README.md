@@ -10,3 +10,12 @@ Despite the simplicity of the UI, this password generator does have some more co
 ## Deployed Application 
 
 [Click for deployed application](https://will-neal.github.io/Wills-Password-Generator/)
+
+## Screenshots 
+<br>
+
+![Password Generator Landing Page](https://github.com/Will-Neal/Wills-Password-Generator/blob/main/images/landingPage.jpg?raw=true)
+
+![Password Generator Prompt Example](https://github.com/Will-Neal/Wills-Password-Generator/blob/main/images/prompt.jpg?raw=true)
+
+![Password Generator Password](https://github.com/Will-Neal/Wills-Password-Generator/blob/main/images/generatedPassword.jpg?raw=true)
