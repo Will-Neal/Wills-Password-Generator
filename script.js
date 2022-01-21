@@ -14,24 +14,7 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 //function that generates the password
-function generatePassword() {
-  userPassword = ""
-  var passwordCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-/";
-  var passwordLength = prompt("How many characters do you want?");
-  if (passwordLength < 8) {
-    alert("Password cannotbe less than 8 characters")
-    generatePassword()
-  } else if (passwordLength > 128){
-    alert("Password cannot be more than 128 characters")
-  } else {
-      for (i=0; i < passwordLength; i++) {
-        userPassword += passwordCharacters.charAt(Math.floor(Math.random() * passwordCharacters.length))
-      }
-      return userPassword
-      writePassword()
-      console.log(userPassword)
-  }
-
+//simple version only based on length
 // function generatePassword() {
 //   userPassword = ""
 //   var passwordCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-/";
@@ -50,4 +33,23 @@ function generatePassword() {
 //       console.log(userPassword)
 //   }
 
-}
+//function to generate password based on more user choices
+function generatePassword() {
+  userPassword = ""
+  var passwordCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-/";
+  var passwordLength = prompt("How many characters do you want?");
+  if (passwordLength < 8) {
+    alert("Password cannotbe less than 8 characters")
+    generatePassword()
+  } else if (passwordLength > 128){
+    alert("Password cannot be more than 128 characters")
+  } else {
+      for (i=0; i < passwordLength; i++) {
+        userPassword += passwordCharacters.charAt(Math.floor(Math.random() * passwordCharacters.length))
+      }
+      return userPassword
+      writePassword()
+      console.log(userPassword)
+  }
+
+
