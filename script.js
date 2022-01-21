@@ -45,28 +45,28 @@ function generatePassword() {
   var numbers = "1234567890"
   var specialCharacters = "!@#$%^&*()-+/" 
   //asking the user to confirm which characters they want to include
-  var lowerConfirm = confirm("Do you want to include lowercase letters?")
+  var lowerConfirm = confirm("Include lowercase letters?")
   if (lowerConfirm) {
     passwordCharacters += lowerCase
   } else {
     passwordCharacters = passwordCharacters
   }
 
-  var upperConfirm = confirm("Do you want to include uppercase letters?")
+  var upperConfirm = confirm("Include uppercase letters?")
   if (upperConfirm) {
     passwordCharacters += upperCase
   } else {
     passwordCharacters = passwordCharacters
   } 
 
-  var numberConfirm = confirm("Do you want to include numeric characters?")
+  var numberConfirm = confirm("Include numeric characters?")
   if (numberConfirm) {
     passwordCharacters += numbers
   } else {
     passwordCharacters = passwordCharacters
   }
 
-  var specialConfirm = confirm("Do you want to include special characters?")
+  var specialConfirm = confirm("Include special characters?")
   if (specialConfirm) {
     passwordCharacters += specialCharacters
   } else {
@@ -86,7 +86,7 @@ function generatePassword() {
           userPassword += passwordCharacters.charAt(Math.floor(Math.random() * passwordCharacters.length))
         }
         return userPassword
-        writePassword()
+        writePassword() 
         console.log(userPassword)
     }
   } else {
