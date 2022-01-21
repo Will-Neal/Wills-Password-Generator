@@ -34,9 +34,46 @@ generateBtn.addEventListener("click", writePassword);
 //   }
 
 //function to generate password based on more user choices
+
 function generatePassword() {
   userPassword = ""
-  var passwordCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-/";
+  //Empty string to be added to depeneding on user choices
+  var passwordCharacters = "";
+  //variabes for the different user options
+  var lowerCase = "abcdefghijklmnopqrstuvwxyz"
+  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  var numbers = "1234567890"
+  var specialCharacters = "!@#$%^&*()-+/" 
+  //asking the user to confirm which characters they want to include
+  var lowerConfirm = confirm("Do you want to include lowercase letters?")
+  if (lowerConfirm) {
+    passwordCharacters += lowerCase
+  } else {
+    passwordCharacters = passwordCharacters
+  }
+
+  var upperConfirm = confirm("Do you want to include uppercase letters?")
+  if (upperConfirm) {
+    passwordCharacters += upperCase
+  } else {
+    passwordCharacters = passwordCharacters
+  } 
+
+  var numberConfirm = confirm("Do you want to include numeric characters?")
+  if (numberConfirm) {
+    passwordCharacters += numbers
+  } else {
+    passwordCharacters = passwordCharacters
+  }
+
+  var specialConfirm = confirm("Do you want to include special characters?")
+  if (specialConfirm) {
+    passwordCharacters += specialCharacters
+  } else {
+    passwordCharacters = passwordCharacters
+  }
+
+
   var passwordLength = prompt("How many characters do you want?");
   if (passwordLength < 8) {
     alert("Password cannotbe less than 8 characters")
@@ -52,4 +89,4 @@ function generatePassword() {
       console.log(userPassword)
   }
 
-
+}
